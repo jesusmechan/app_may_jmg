@@ -1,0 +1,55 @@
+<form [formGroup]="formUsuario" (ngSubmit)="registrar()" *ngIf="verForm">
+    <div class="title_container mb-3">
+        <p class="h5">Registre una cuenta</p>
+        <small class="text-muted">Comienza a utilizar nuestra aplicación, simplemente crea una cuenta y
+            disfruta de la experiencia.</small>
+    </div>
+    <div class="input_container mb-3">
+        <label for="nombre" class="form-label">Nombre Completo: <small
+                *ngIf="formUsuario?.get('nombre')?.hasError('required')" class="text-danger">
+                *
+            </small></label>
+        <input type="email" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su nombre"
+            formControlName="nombre">
+
+    </div>
+
+    <div class="input_container mb-3">
+        <label for="correoo" class="form-label">Correo: <small mall
+                *ngIf="formUsuario?.get('correo')?.hasError('required')" class="text-danger">
+                *
+            </small></label>
+        <input type="email" id="correoo" name="correoo" class="form-control" placeholder="Ingrese un correo"
+            formControlName="correo">
+
+    </div>
+    <div class="input_container mb-3">
+        <label for="password" class="form-label">Contraseña: <small mall
+                *ngIf="formUsuario?.get('contrasenia')?.hasError('required')" class="text-danger">
+                *
+            </small></label>
+        <input type="password" id="password" name="password" class="form-control" placeholder=""
+            formControlName="contrasenia">
+
+    </div>
+    <div class="input_container mb-3">
+        <label for="confirmPassword" class="form-label">Confirmar Contraseña: <small mall
+                *ngIf="formUsuario?.get('confirmar_contrasenia')?.hasError('required')" class="text-danger">
+                *
+            </small></label>
+        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder=""
+            formControlName="confirmar_contrasenia">
+
+    </div>
+    <button type="submit" class="btn btn-primary sign-in_btn" [disabled]="!formUsuario.valid">Registrar</button>
+</form>
+
+
+
+<div *ngIf="mostrarMensaje" class="mt-3">
+        <small class="text-muted">Alerta: {{mensajeAlerta}}.</small>
+</div>
+
+<div *ngIf="!verForm" class="mt-5">
+        <small class="text-muted text-danger">Se registró de manera correcta el usuario por favor revisar su correo para su activación.</small>
+</div>

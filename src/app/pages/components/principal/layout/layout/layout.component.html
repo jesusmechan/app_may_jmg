@@ -1,0 +1,53 @@
+<nav id="primary_nav_wrap">
+  <ul>
+    <li routerLinkActive="current-menu-item"><a routerLink="/layout">Home</a></li>
+    <li><a href="javascript:void();">Nosotros</a>
+      <ul>
+        <li>
+          <a routerLink="/layout/quienes-somos">¿Quiénes somos?</a>
+        </li>
+        <li>
+          <a routerLink="/layout/directorio">Directorio</a>
+        </li>
+        <li><a href="#">ABC del Coresec</a></li>
+      </ul>
+    </li>
+    <li><a href="javascript:void();">Gestión Estratégica</a>
+      <ul>
+        <li><a href="#">Planes</a></li>
+        <li><a href="#">Indicadores de Desempeño</a></li>
+        <li><a href="#">Datos Relevantes</a></li>
+        <li><a href="#">Monitoreo de Actividades</a></li>
+        <li><a href="#">Mapa del Delito</a></li>
+      </ul>
+    </li>
+    <li><a href="javascript:void();">Normativa Coresec</a>
+      <ul>
+        <!-- <li class="dir"><a href="#">Sub Menu 2 THIS IS SO LONG IT MIGHT CAUSE AN ISSEUE BUT MAYBE NOT?</a>
+        <ul>
+          <li><a href="#">Category 1</a></li>
+          <li><a href="#">Category 2</a></li>
+          <li><a href="#">Category 3</a></li>
+          <li><a href="#">Category 4</a></li>
+          <li><a href="#">Category 5</a></li>
+        </ul>
+      </li> -->
+        <li><a href="#">Actas</a></li>
+        <li><a href="#">Repositorio Legal</a></li>
+      </ul>
+    </li>
+
+
+    <li><a href="javascript:void();">Aula Virtual</a>
+      <ul>
+        <li><a href="#">Módulo Virtuales</a></li>
+        <li><a href="#">ABC del Coresec</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- Aquí se renderizan los hijos como quienes-somos, etc -->
+<div class="contenido-principal">
+  <router-outlet></router-outlet>
+</div>

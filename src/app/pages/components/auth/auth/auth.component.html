@@ -1,0 +1,39 @@
+<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="row w-100">
+
+      <!-- Sección de imagen -->
+    <div class="col-md-6 d-none d-md-block mt-5">
+      <img src="/images/login.jpg" alt="Imagen decorativa" class="img-fluid rounded shadow" />
+    </div>
+
+    <!-- Sección de login -->
+    <div class="col-md-6">
+      <div class="form_container p-4 border rounded shadow">
+        <!-- Tabs nav -->
+        <ul class="nav nav-tabs mb-3" id="authTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">
+              Iniciar Sesión
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">
+              Registrarse
+            </button>
+          </li>
+        </ul>
+        <!-- Tabs content -->
+        <div class="tab-content" id="authTabsContent">
+          <div class="tab-pane fade show active" id="login" role="tabpanel">
+            <app-login></app-login>
+          </div>
+          <div class="tab-pane fade" id="register" role="tabpanel">
+            <app-registro></app-registro>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  </div>
+</div>
